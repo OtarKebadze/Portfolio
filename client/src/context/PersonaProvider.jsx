@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import { PersonaContext } from './PersonaContext'
 
+
 export function PersonaProvider({ children }) {
   const [persona, setPersona] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('https://tu-url.onrender.com/api/persona')
+    fetch('https://portfolio-glde.onrender.com')
       .then(res => res.json())
       .then(data => {
         setPersona(data)
