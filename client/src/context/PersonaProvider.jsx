@@ -8,7 +8,7 @@ export function PersonaProvider({ children }) {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('https://portfolio-glde.onrender.com')
+    fetch('https://portfolio-glde.onrender.com/api/persona')
       .then(res => res.json())
       .then(data => {
         setPersona(data)
