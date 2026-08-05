@@ -7,7 +7,7 @@ export function PersonaProvider({ children }) {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/persona')
+    fetch('https://tu-url.onrender.com/api/persona')
       .then(res => res.json())
       .then(data => {
         setPersona(data)
